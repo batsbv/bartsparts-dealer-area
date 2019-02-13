@@ -38,8 +38,11 @@ export class TokenStorage {
 	 */
 	public getUserRoles(): Observable<any> {
 		const user: any = JSON.parse(localStorage.getItem('user'));
-		let roles = Object.keys(user.roles)
-		roles = roles.map(function(x){ return x.toUpperCase() })
+		let roles
+		if(user!=null){
+			roles = Object.keys(user.roles)
+			roles = roles.map(function(x){ return x.toUpperCase() })
+		}
 		try {
 			return of(roles);
 		} catch (e) {}
@@ -98,5 +101,6 @@ export class TokenStorage {
 		localStorage.removeItem('accessToken');
 		localStorage.removeItem('refreshToken');
 		localStorage.removeItem('userRoles');
+		localStorage.removeItem('user');
 	}
 }

@@ -12,9 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorPageComponent } from './snippets/error-page/error-page.component';
 import { InnerComponent } from './components/inner/inner.component';
-import { ProductsComponent } from './products/products.component';
-import { OrdersComponent } from './orders/orders.component';
-import { DealersComponent } from './dealers/dealers.component';
+//import { PropertiesComponent } from './properties/properties.component';
 
 @NgModule({
 	declarations: [
@@ -23,9 +21,7 @@ import { DealersComponent } from './dealers/dealers.component';
 		ProfileComponent,
 		ErrorPageComponent,
 		InnerComponent,
-		ProductsComponent,
-		OrdersComponent,
-		DealersComponent,
+	//	PropertiesComponent
 	],
 	imports: [
 		CommonModule,

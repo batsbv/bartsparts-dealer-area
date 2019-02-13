@@ -11,23 +11,16 @@ export class PagesConfig implements ConfigModel {
 					desc: 'Latest updates and statistic charts'
 				}
 			},
-			'dealers':{
-				page:{
-					title: 'Dealers',
-					desc: 'All our dealers'
-				},
+			Orders: {
+				page: { title: 'Products List', desc: '' }
 			},
-			'orders':{
-				page:{
-					title: 'Orders',
-					desc: 'All our orders'
+			products: {
+				list: {
+					page: { title: 'Products List', desc: '' }
 				},
-			},
-			'products':{
-				page:{
-					title: 'Products',
-					desc: 'All our products'
-				},
+				create: {
+					page: { title: 'Create New Product', desc: '' }
+				}
 			},
 			builder: {
 				page: { title: 'Layout Builder', desc: 'Layout builder' }

@@ -11,7 +11,8 @@ export class AclModel implements AclInterface, ConfigModel {
 	// default permissions
 	public permissions: any = {
 		ADMIN: ['canDoAnything'],
-		USER: ['canDoLimitedThings']
+		USER: ['canDoLimitedThings'],
+		ACCOUNT: ['sameAsUser']
 	};
 
 	// store an object of current user roles

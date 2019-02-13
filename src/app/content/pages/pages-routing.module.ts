@@ -7,10 +7,7 @@ import { ProfileComponent } from './header/profile/profile.component';
 import { ErrorPageComponent } from './snippets/error-page/error-page.component';
 import { InnerComponent } from "./components/inner/inner.component";
 
-//BartsParts Pages
-import {DealersComponent} from "./dealers/dealers.component";
-import {OrdersComponent} from "./orders/orders.component";
-import {ProductsComponent} from "./products/products.component";
+//Custom Pages
 
 
 const routes: Routes = [
@@ -21,7 +18,7 @@ const routes: Routes = [
 		canActivate: [NgxPermissionsGuard],
 		data: {
 			permissions: {
-				only: ['ADMIN', 'USER'],
+				only: ['ADMIN', 'USER', 'ACCOUNT'],
 				except: ['GUEST'],
 				redirectTo: '/login'
 			}
@@ -32,20 +29,16 @@ const routes: Routes = [
 				loadChildren: './components/dashboard/dashboard.module#DashboardModule'
 			},
 			{
-				path: 'dealers',
-				component: DealersComponent
+				path: 'builder',
+				loadChildren: './builder/builder.module#BuilderModule'
 			},
 			{
 				path: 'orders',
-				component: OrdersComponent
+				loadChildren: './orders/orders.module#OrdersModule'
 			},
 			{
 				path: 'products',
-				component: ProductsComponent
-			},			
-			{
-				path: 'builder',
-				loadChildren: './builder/builder.module#BuilderModule'
+				loadChildren: './products/products.module#ProductsModule'
 			},
 			{
 				path: 'header/actions',
@@ -58,7 +51,7 @@ const routes: Routes = [
 			{
 				path: 'inner',
 				component: InnerComponent
-			},
+			}
 		]
 	},
 	{

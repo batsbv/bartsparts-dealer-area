@@ -26,40 +26,41 @@ export class MenuConfig implements ConfigModel {
 						translate: 'MENU.DASHBOARD'
 					},
 					{
-						title: 'Dealers',
-						desc: 'All our dealers',
-						root: true,
-						icon: 'flaticon-line-graph',
-						page: '/dealers',
-						// badge: {type: 'm-badge--danger', value: ''},
-						translate: 'MENU.DEALERS'
-					},
-					{
 						title: 'Orders',
-						desc: 'All our orders',
+						desc: 'My orders',
 						root: true,
 						icon: 'flaticon-line-graph',
 						page: '/orders',
-						badge: {type: 'm-badge--danger', value: '1'},
+						//badge: {type: 'm-badge--danger', value: ''},
 						translate: 'MENU.ORDERS'
 					},
 					{
 						title: 'Products',
-						desc: 'All our products',
+						desc: 'All products',
 						root: true,
-						icon: 'flaticon-line-graph',
-						page: '/products',
-						// badge: {type: 'm-badge--danger', value: ''},
-						translate: 'MENU.PRODUCTS'
-					}
-					/*,
+						bullet: 'dot',
+						icon: 'flaticon-business',
+						translate: 'MENU.PRODUCTS',
+						submenu:[
+							{
+								title: 'List',
+								page: '/products',
+								translate: 'MENU.DASHBOARD'
+							},
+							{
+								title: 'Create',
+								page: '/products/create',
+								translate: 'MENU.DASHBOARD'
+							}
+						]
+					},
 					{section: 'Tools'},
 					{
 						title: 'Layout Builder',
 						root: true,
 						icon: 'flaticon-settings',
 						page: '/builder'
-					}*/
+					}
 				]
 			}
 		};

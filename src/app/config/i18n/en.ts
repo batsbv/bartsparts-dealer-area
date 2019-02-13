@@ -12,9 +12,8 @@ export const locale = {
 			REPORTS: 'Reports',
 			APPS: 'Apps',
 			DASHBOARD: 'Dashboard',
-			PRODUCTS:'Products',
-			DEALERS: 'Dealers',
-			ORDERS:'Orders'
+			ORDERS: 'Orders',
+			PRODUCTS: 'Products'
 		},
 		AUTH: {
 			GENERAL: {

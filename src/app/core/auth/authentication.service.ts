@@ -14,7 +14,7 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class AuthenticationService implements AuthService {
-	API_URL = 'http://localhost:9000'//environment.API_URL;
+	API_URL = environment.API_URL;
 	API_ENDPOINT_LOGIN = '/api/login';
 	API_ENDPOINT_REFRESH = '/api/refresh';
 	API_ENDPOINT_REGISTER = '/api/register';
@@ -35,6 +35,7 @@ export class AuthenticationService implements AuthService {
 	 * @memberOf AuthService
 	 */
 	public isAuthorized(): Observable<boolean> {
+
 		return this.tokenStorage.getAccessToken().pipe(map(token => !!token));
 	}
 
@@ -44,6 +45,7 @@ export class AuthenticationService implements AuthService {
 	 * @returns {Observable<string>}
 	 */
 	public getAccessToken(): Observable<string> {
+			console.log('test')
 		return this.tokenStorage.getAccessToken();
 	}
 

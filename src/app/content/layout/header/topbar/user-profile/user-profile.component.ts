@@ -20,6 +20,9 @@ export class UserProfileComponent implements OnInit {
 
 	@ViewChild('mProfileDropdown') mProfileDropdown: ElementRef;
 
+	name: string;
+	email: string;
+
 	constructor (
 		private router: Router,
 		private authService: AuthenticationService,
