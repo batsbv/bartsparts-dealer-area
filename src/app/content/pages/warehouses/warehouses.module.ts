@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductsComponent } from './products.component';
+import { WarehousesComponent } from './warehouses.component';
 import { LayoutModule } from '../../layout/layout.module';
 import { PartialsModule } from '../../partials/partials.module';
-import { ProductsListComponent } from './products-list/products-list.component';
-import { ProductsCreateComponent } from './products-create/products-create.component';
-import { ProductsDetailsComponent } from './products-details/products-details.component';
+import { WarehousesListComponent } from './warehouses-list/warehouses-list.component';
+import { WarehousesCreateComponent } from './warehouses-create/warehouses-create.component';
+import { WarehousesDetailsComponent } from './warehouses-details/warehouses-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { ProductsService } from './products.service';
+import { WarehousesService } from './warehouses.service';
 import {InterceptService} from '../../../core/auth/httpIntercept.service';
 // Material
 import {
@@ -41,7 +41,7 @@ import {
 const routes: Routes = [
 	{
 		path: '',
-		component: ProductsComponent,
+		component: WarehousesComponent,
 		children: [
 			{
 				path: '',
@@ -50,32 +50,32 @@ const routes: Routes = [
 			},
 			{
 				path: 'list',
-				component: ProductsListComponent
+				component: WarehousesListComponent
 			},
 			{
 				path: 'create',
-				component: ProductsCreateComponent
+				component: WarehousesCreateComponent
 			},
 			{
 				path: 'details/:id',
-				component: ProductsDetailsComponent
+				component: WarehousesDetailsComponent
 			}
 			/*,
 			{
-				path: 'products',
-				component: ProductsListComponent,
+				path: 'warehouses',
+				component: WarehousesListComponent,
 			},
 			{
-				path: 'products/add',
-				component: ProductEditComponent
+				path: 'warehouses/add',
+				component: WarehouseEditComponent
 			},
 			{
-				path: 'products/edit',
-				component: ProductEditComponent
+				path: 'warehouses/edit',
+				component: WarehouseEditComponent
 			},
 			{
-				path: 'products/edit/:id',
-				component: ProductEditComponent
+				path: 'warehouses/edit/:id',
+				component: WarehouseEditComponent
 			},*/
 		]
 	}
@@ -112,7 +112,7 @@ const routes: Routes = [
 		HttpClientModule
 	],
 	providers: [
-		ProductsService,
+		WarehousesService,
 		{
 			provide: MAT_DIALOG_DEFAULT_OPTIONS,
 			useValue: {
@@ -130,10 +130,10 @@ const routes: Routes = [
 			 },
 	],
 	declarations: [
-		ProductsComponent,
-		ProductsListComponent,
-		ProductsCreateComponent,
-		ProductsDetailsComponent
+		WarehousesComponent,
+		WarehousesListComponent,
+		WarehousesCreateComponent,
+		WarehousesDetailsComponent
 	]
 })
-export class ProductsModule {}
+export class WarehousesModule {}

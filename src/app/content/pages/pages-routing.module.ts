@@ -41,6 +41,10 @@ const routes: Routes = [
 				loadChildren: './products/products.module#ProductsModule'
 			},
 			{
+				path: 'warehouses',
+				loadChildren: './warehouses/warehouses.module#WarehousesModule'
+			},
+			{
 				path: 'header/actions',
 				component: ActionComponent
 			},

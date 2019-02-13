@@ -1,5 +1,5 @@
 
-export class ProductModel {
+export class WarehouseModel {
 	_id: string;
 	name: string;
 	description: string;

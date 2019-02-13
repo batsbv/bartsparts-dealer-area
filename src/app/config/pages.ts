@@ -22,6 +22,9 @@ export class PagesConfig implements ConfigModel {
 					page: { title: 'Create New Product', desc: '' }
 				}
 			},
+			Warehouses: {
+				page: { title: 'Warehouse List', desc: '' }
+			},
 			builder: {
 				page: { title: 'Layout Builder', desc: 'Layout builder' }
 			},

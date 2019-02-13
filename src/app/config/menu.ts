@@ -54,6 +54,15 @@ export class MenuConfig implements ConfigModel {
 							}
 						]
 					},
+					{
+						title: 'Warehouses',
+						desc: 'My warehouses',
+						root: true,
+						icon: 'flaticon-line-graph',
+						page: '/warehouses',
+						//badge: {type: 'm-badge--danger', value: ''},
+						translate: 'MENU.WAREHOUSES'
+					},
 					{section: 'Tools'},
 					{
 						title: 'Layout Builder',
