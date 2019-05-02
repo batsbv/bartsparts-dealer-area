@@ -13,9 +13,10 @@ import { ECommerceModule } from './apps/e-commerce/e-commerce.module';
 import { UserManagementModule } from './user-management/user-management.module';
 import { CoreModule } from '../../core/core.module';
 import { MyPageComponent } from './my-page/my-page.component';
+import { AwsComponent } from './aws/aws.component';
 
 @NgModule({
-	declarations: [MyPageComponent],
+	declarations: [MyPageComponent, AwsComponent],
 	exports: [],
 	imports: [
 		CommonModule,

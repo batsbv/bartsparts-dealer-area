@@ -361,6 +361,13 @@ export class MenuConfig {
 					icon: 'flaticon-line-graph' // <= Choose the icon
 				},
 				{
+					title: 'AWS', // <= Title of the page
+					desc: 'aws description', // <= Description of the page
+					root: true,
+					page: 'aws', // <= URL
+					icon: 'flaticon-line-graph' // <= Choose the icon
+				},
+				{
 					title: 'Layout Builder',
 					root: true,
 					icon: 'flaticon2-expand',

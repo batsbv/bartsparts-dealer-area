@@ -9,6 +9,7 @@ import { AuthGuard } from '../../../core/auth';
 import { NgxPermissionsGuard } from 'ngx-permissions';
 // My Component
 import { MyPageComponent } from './../../pages/my-page/my-page.component';
+import { AwsComponent } from '../../pages/aws/aws.component';
 
 const routes: Routes = [
 	{
@@ -22,6 +23,9 @@ const routes: Routes = [
 			},{
 				path: 'my-page', // <= Page URL
 				component: MyPageComponent // <= Page component registration
+		   	},{
+				path: 'aws', // <= Page URL
+				component: AwsComponent // <= Page component registration
 		   	},
 			{
 				path: 'mail',

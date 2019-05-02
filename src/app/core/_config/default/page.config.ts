@@ -9,6 +9,9 @@ export class PageConfig {
 		'my-page': { // <= add page URL
 			page: { title: 'My page', desc: 'My page desc' } // <= Page name and description
 		},
+		'aws': {
+			page: {title: 'AWS call test', desc: 'aws blabla' }
+		},
 		ngbootstrap: {
 			accordion: {
 				page: {title: 'Accordion', desc: ''}
